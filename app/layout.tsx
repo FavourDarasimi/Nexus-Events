@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, Cormorant_Garamond } from "next/font/google";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import PageTransition from "@/components/animations/PageTransition";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -46,7 +49,13 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${inter.variable} ${cormorant.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        <main className="flex-1">
+          <PageTransition>{children}</PageTransition>
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }
