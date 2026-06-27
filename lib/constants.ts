@@ -319,5 +319,41 @@ export const EVENT_TYPES = [
   "Other",
 ] as const;
 
+export const FEATURED_EVENTS = [
+  {
+    id: 1,
+    title: "Grand Ballroom Wedding",
+    category: "Weddings",
+    description:
+      "An opulent celebration featuring crystal chandeliers, floral installations, and a five-course dining experience for 300 guests.",
+    image:
+      "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
+    cta: "View Gallery",
+    link: "/gallery",
+  },
+  {
+    id: 2,
+    title: "Annual Tech Summit",
+    category: "Corporate",
+    description:
+      "A cutting-edge conference with immersive product demos, keynote speeches, and networking lounges for industry leaders.",
+    image:
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+    cta: "View Gallery",
+    link: "/gallery",
+  },
+  {
+    id: 3,
+    title: "Sunset Charity Gala",
+    category: "Galas",
+    description:
+      "A breathtaking evening of philanthropy under the stars, complete with live performances and a silent auction.",
+    image:
+      "https://images.unsplash.com/photo-1464369400601-45e8e7c5c561?w=800&q=80",
+    cta: "View Gallery",
+    link: "/gallery",
+  },
+] as const;
+
 export const MARQUEE_WORDS =
   "Weddings · Galas · Conferences · Birthdays · Product Launches · Destination Events ·";

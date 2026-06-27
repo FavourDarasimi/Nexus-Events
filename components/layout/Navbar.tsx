@@ -94,7 +94,10 @@ export default function Navbar() {
 
             <button
               onClick={() => setMobileOpen(true)}
-              className="md:hidden flex flex-col gap-1.5 p-2"
+              className={cn(
+                "md:hidden flex flex-col gap-1.5 p-2",
+                mobileOpen && "hidden",
+              )}
               aria-label="Open menu"
             >
               <span className="block w-6 h-0.5 bg-white transition-all" />
@@ -112,7 +115,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-black/95 flex flex-col items-center justify-center"
+            className="fixed inset-0 z-50 bg-black/95 flex flex-col items-center justify-center"
           >
             <button
               onClick={() => setMobileOpen(false)}
