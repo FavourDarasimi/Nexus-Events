@@ -7,7 +7,7 @@ import GoldDivider from "@/components/ui/GoldDivider";
 
 export default function AboutHero() {
   return (
-    <section className="relative h-[40vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[45vh]  flex items-center justify-center overflow-hidden">
       <ScrollParallax offset={0.2} className="absolute inset-0">
         <Image
           src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=1920&q=80"
