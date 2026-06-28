@@ -138,63 +138,96 @@ export const GALLERY_ITEMS = [
     title: "Grand Ballroom Wedding",
     category: "Weddings",
     image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
+      "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=900&fit=crop&q=80",
+    aspect: "2/3",
   },
   {
     id: 2,
-    title: "Tech Conference Gala",
+    title: "Tech Conference Keynote",
     category: "Corporate",
     image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=800&fit=crop&q=80",
+    aspect: "3/4",
   },
   {
     id: 3,
     title: "Annual Charity Gala",
     category: "Galas",
     image:
-      "https://images.unsplash.com/photo-1464369400601-45e8e7c5c561?w=600&q=80",
+      "https://images.unsplash.com/photo-1464369400601-45e8e7c5c561?w=600&h=750&fit=crop&q=80",
+    aspect: "4/5",
   },
   {
     id: 4,
     title: "Rooftop Birthday Celebration",
     category: "Social",
     image:
-      "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=600&q=80",
+      "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=600&h=900&fit=crop&q=80",
+    aspect: "2/3",
   },
   {
     id: 5,
-    title: "Lakeside Wedding",
+    title: "Lakeside Wedding Ceremony",
     category: "Weddings",
     image:
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&q=80",
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=800&fit=crop&q=80",
+    aspect: "3/4",
   },
   {
     id: 6,
     title: "Product Launch Event",
     category: "Corporate",
     image:
-      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&q=80",
+      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&h=750&fit=crop&q=80",
+    aspect: "4/5",
   },
   {
     id: 7,
     title: "Black Tie Gala",
     category: "Galas",
     image:
-      "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=600&q=80",
+      "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=600&h=850&fit=crop&q=80",
+    aspect: "12/17",
   },
   {
     id: 8,
     title: "Garden Party",
     category: "Social",
     image:
-      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80",
+      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=800&fit=crop&q=80",
+    aspect: "3/4",
   },
   {
     id: 9,
     title: "Beachfront Wedding",
     category: "Weddings",
     image:
-      "https://images.unsplash.com/photo-1546195643-70f48f9c5b87?w=600&q=80",
+      "https://images.unsplash.com/photo-1546195643-70f48f9c5b87?w=600&h=900&fit=crop&q=80",
+    aspect: "2/3",
+  },
+  {
+    id: 10,
+    title: "Corporate Summit",
+    category: "Corporate",
+    image:
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=750&fit=crop&q=80",
+    aspect: "4/5",
+  },
+  {
+    id: 11,
+    title: "Gala Dinner Setup",
+    category: "Galas",
+    image:
+      "https://images.unsplash.com/photo-1415025148099-17fe74102b28?w=600&h=850&fit=crop&q=80",
+    aspect: "12/17",
+  },
+  {
+    id: 12,
+    title: "Birthday Floral Decor",
+    category: "Social",
+    image:
+      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=900&fit=crop&q=80",
+    aspect: "2/3",
   },
 ] as const;
 

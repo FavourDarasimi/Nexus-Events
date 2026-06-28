@@ -8,7 +8,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 export default function Story() {
   return (
     <section className="py-24 md:py-32 lg:py-40 bg-black">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+      <div className="max-w-[1500px] mx-auto px-6 md:px-10 lg:px-16">
         {STORY_BLOCKS.map((block, i) => (
           <motion.div
             key={block.title}

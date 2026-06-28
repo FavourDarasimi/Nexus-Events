@@ -48,7 +48,7 @@ export default function Navbar() {
             : "bg-transparent",
         )}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+        <div className="max-w-[1500px] mx-auto px-6 md:px-10 lg:px-16">
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex flex-col leading-none">
               <span className="font-playfair text-2xl tracking-wider text-white">

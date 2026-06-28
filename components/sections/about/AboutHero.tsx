@@ -1,26 +1,19 @@
 "use client";
 
-import Image from "next/image";
-import ScrollParallax from "@/components/animations/ScrollParallax";
+import FloatingOrbs from "@/components/animations/FloatingOrbs";
+import SparkleBackground from "@/components/animations/SparkleBackground";
 import TextReveal from "@/components/animations/TextReveal";
 import GoldDivider from "@/components/ui/GoldDivider";
 
 export default function AboutHero() {
   return (
-    <section className="relative h-[45vh]  flex items-center justify-center overflow-hidden">
-      <ScrollParallax offset={0.2} className="absolute inset-0">
-        <Image
-          src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=1920&q=80"
-          alt=""
-          fill
-          className="object-cover"
-          sizes="100vw"
-          priority
-        />
-      </ScrollParallax>
-      <div className="absolute inset-0 bg-black/60" />
-
+    <section className="relative h-[45vh] flex items-center justify-center overflow-hidden bg-black">
+      <FloatingOrbs />
+      <SparkleBackground />
       <div className="relative z-10 text-center px-6">
+        <p className="font-cormorant text-gold text-lg md:text-xl tracking-widest uppercase italic mb-6">
+          Our Story
+        </p>
         <TextReveal
           as="h1"
           text="Our Story"

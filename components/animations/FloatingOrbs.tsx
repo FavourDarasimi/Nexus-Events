@@ -1,6 +1,5 @@
 "use client";
 
-import { useMemo } from "react";
 import { motion } from "framer-motion";
 
 interface Orb {
@@ -14,26 +13,26 @@ interface Orb {
   opacity: number;
 }
 
-function generateOrbs(count: number): Orb[] {
-  return Array.from({ length: count }, (_, i) => ({
-    id: i,
-    x: 10 + Math.random() * 80,
-    y: 10 + Math.random() * 80,
-    width: 200 + Math.random() * 400,
-    height: 200 + Math.random() * 300,
-    duration: 4 + Math.random() * 4,
-    delay: Math.random() * 3,
-    opacity: 0.15 + Math.random() * 0.2,
-  }));
+function seeded(i: number): number {
+  const x = Math.sin(i * 12.9898 + 78.233) * 43758.5453;
+  return x - Math.floor(x);
 }
 
-export default function FloatingOrbs({
-  count = 6,
-}: {
-  count?: number;
-}) {
-  const orbs = useMemo(() => generateOrbs(count), [count]);
+const orbs: Orb[] = Array.from({ length: 6 }, (_, i) => {
+  const s = (n: number) => seeded(i * 11 + n * 17);
+  return {
+    id: i,
+    x: 10 + s(0) * 80,
+    y: 10 + s(1) * 80,
+    width: 200 + s(2) * 400,
+    height: 200 + s(3) * 300,
+    duration: 4 + s(4) * 4,
+    delay: s(5) * 3,
+    opacity: 0.15 + s(6) * 0.2,
+  };
+});
 
+export default function FloatingOrbs() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {orbs.map((orb) => (

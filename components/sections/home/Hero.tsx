@@ -9,12 +9,12 @@ import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen min-h-[700px] flex items-center md:justify-center justify-left overflow-hidden">
       <ParticleField />
 
       <ScrollParallax
         offset={0.3}
-        className="relative z-10 text-center max-w-5xl mx-auto px-6"
+        className="relative z-10 md:text-center text-left max-w-5xl mx-auto px-6"
       >
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -30,14 +30,14 @@ export default function Hero() {
           text="We Don't Plan Events."
           mode="words"
           delay={0.4}
-          className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-tight tracking-tight justify-center"
+          className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-tight tracking-tight md:justify-center justify-left"
         />
         <TextReveal
           as="h1"
           text="We Craft Memories."
           mode="words"
           delay={0.8}
-          className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gold leading-tight tracking-tight justify-center mt-2"
+          className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gold leading-tight tracking-tight md:justify-center justify-left mt-2"
         />
 
         <motion.p
@@ -54,12 +54,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
+          className="flex flex-col sm:flex-row justify-center md:items-center items-left gap-4 mt-10"
         >
-          <Button variant="gold-filled" size="lg" href="/services">
+          <Button variant="gold-filled" size="lg" href="/services" className="w-full">
             Explore Services
           </Button>
-          <Button variant="outline" size="lg" href="/gallery">
+          <Button variant="outline" size="lg" href="/gallery" className="w-full">
             View Gallery
           </Button>
         </motion.div>

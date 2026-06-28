@@ -33,7 +33,7 @@ function AnimatedCounter({
 export default function Philosophy() {
   return (
     <section className="py-24 md:py-32 lg:py-40 bg-charcoal">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+      <div className="max-w-[1500px] mx-auto px-6 md:px-10 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}

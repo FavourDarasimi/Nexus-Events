@@ -30,7 +30,7 @@ function FacebookIcon() {
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-gold/30">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-16 md:py-20">
+      <div className="max-w-[1500px] mx-auto px-6 md:px-10 lg:px-16 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex flex-col leading-none">
@@ -88,7 +88,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="max-w-[1500px] mx-auto px-6 md:px-10 lg:px-16 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-inter text-xs text-white-muted">
             &copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>

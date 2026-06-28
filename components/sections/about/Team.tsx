@@ -38,7 +38,7 @@ function TwitterIcon() {
 export default function Team() {
   return (
     <section className="py-24 md:py-32 lg:py-40 bg-charcoal">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+      <div className="max-w-[1500px] mx-auto px-6 md:px-10 lg:px-16">
         <div className="text-center mb-16">
           <SectionLabel>Our Team</SectionLabel>
           <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-white mt-4 mb-6">
