@@ -36,7 +36,7 @@ export default function GalleryClient() {
   }, [lightboxIndex, filtered.length]);
 
   return (
-    <section className="py-24 md:py-28 bg-black">
+    <section className="py-24 md:py-32 lg:py-40 bg-black">
       <div className="max-w-[1500px] mx-auto px-5 md:px-8 lg:px-12">
         <div className="flex flex-wrap items-center justify-center gap-1 mb-10">
           {CATEGORIES.map((cat) => (
@@ -44,7 +44,7 @@ export default function GalleryClient() {
               key={cat}
               onClick={() => setActiveFilter(cat)}
               className={cn(
-                "relative px-4 py-1.5 font-inter text-sm transition-colors duration-300",
+                "relative px-4 py-1.5 font-inter text-sm transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm",
                 activeFilter === cat
                   ? "text-white"
                   : "text-white-muted hover:text-white",
@@ -72,8 +72,11 @@ export default function GalleryClient() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.92 }}
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                className="break-inside-avoid mb-3 cursor-pointer group relative overflow-hidden rounded-xl"
+                className="break-inside-avoid mb-3 cursor-pointer group relative overflow-hidden rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 onClick={() => openLightbox(i)}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLightbox(i); } }}
+                role="button"
+                tabIndex={0}
               >
                 <img
                   src={item.image}
@@ -124,11 +127,11 @@ export default function GalleryClient() {
                     if (e.key === "ArrowLeft") goPrev();
                   }}
                 >
-                  <div className="relative max-w-5xl w-full max-h-[85vh] flex items-center justify-center">
+                  <div className="relative w-full max-w-6xl h-[80vh] flex items-center justify-center overflow-hidden rounded-xl">
                     <img
                       src={filtered[lightboxIndex].image}
                       alt={filtered[lightboxIndex].title}
-                      className="max-w-full max-h-[85vh] w-auto h-auto object-contain rounded-xl"
+                      className="w-full h-full object-cover"
                     />
 
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
@@ -142,7 +145,7 @@ export default function GalleryClient() {
 
                     <button
                       onClick={goPrev}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-gold hover:text-black transition-colors"
+                      className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-gold hover:text-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                       aria-label="Previous image"
                     >
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -151,7 +154,7 @@ export default function GalleryClient() {
                     </button>
                     <button
                       onClick={goNext}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-gold hover:text-black transition-colors"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-gold hover:text-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                       aria-label="Next image"
                     >
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -161,7 +164,7 @@ export default function GalleryClient() {
 
                     <Dialog.Close asChild>
                       <button
-                        className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-gold hover:text-black transition-colors"
+                        className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-gold hover:text-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                         aria-label="Close"
                       >
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

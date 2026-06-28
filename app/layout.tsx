@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter, Cormorant_Garamond } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { MotionConfig } from "framer-motion";
 import PageTransition from "@/components/animations/PageTransition";
 import "./globals.css";
 
@@ -50,11 +51,13 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} ${cormorant.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        <main className="flex-1">
-          <PageTransition>{children}</PageTransition>
-        </main>
-        <Footer />
+        <MotionConfig reducedMotion="user">
+          <Navbar />
+          <main className="flex-1">
+            <PageTransition>{children}</PageTransition>
+          </main>
+          <Footer />
+        </MotionConfig>
       </body>
     </html>
   );

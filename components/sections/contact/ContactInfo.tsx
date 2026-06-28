@@ -101,7 +101,7 @@ export default function ContactInfo() {
             href={CONTACT_INFO.social.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white-muted hover:text-gold hover:border-gold/50 transition-all duration-300"
+            className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white-muted hover:text-gold hover:border-gold/50 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             aria-label="Instagram"
           >
             <InstagramIcon />
@@ -110,7 +110,7 @@ export default function ContactInfo() {
             href={CONTACT_INFO.social.pinterest}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white-muted hover:text-gold hover:border-gold/50 transition-all duration-300"
+            className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white-muted hover:text-gold hover:border-gold/50 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             aria-label="Pinterest"
           >
             <PinterestIcon />
@@ -119,7 +119,7 @@ export default function ContactInfo() {
             href={CONTACT_INFO.social.facebook}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white-muted hover:text-gold hover:border-gold/50 transition-all duration-300"
+            className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white-muted hover:text-gold hover:border-gold/50 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             aria-label="Facebook"
           >
             <FacebookIcon />

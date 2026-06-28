@@ -6,7 +6,7 @@ import SparkleBackground from "@/components/animations/SparkleBackground";
 
 export default function ServicesCTA() {
   return (
-    <section className="relative py-24 md:py-32 bg-black overflow-hidden">
+    <section className="relative py-24 md:py-32 lg:py-40 bg-black overflow-hidden">
       <SparkleBackground />
       <div className="max-w-3xl mx-auto px-6 text-center">
         <motion.h2

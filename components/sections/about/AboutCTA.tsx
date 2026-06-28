@@ -6,7 +6,7 @@ import SparkleBackground from "@/components/animations/SparkleBackground";
 
 export default function AboutCTA() {
   return (
-    <section className="relative py-24 md:py-32 bg-charcoal overflow-hidden">
+    <section className="relative py-24 md:py-32 lg:py-40 bg-charcoal overflow-hidden">
       <SparkleBackground />
 
       <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">

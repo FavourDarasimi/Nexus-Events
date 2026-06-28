@@ -78,7 +78,7 @@ export default function Footer() {
                 href={CONTACT_INFO.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white-muted hover:text-gold transition-colors duration-300"
+                className="text-white-muted hover:text-gold transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
                 aria-label="Instagram"
               >
                 <InstagramIcon />
@@ -87,7 +87,7 @@ export default function Footer() {
                 href={CONTACT_INFO.social.pinterest}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white-muted hover:text-gold transition-colors duration-300"
+                className="text-white-muted hover:text-gold transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
                 aria-label="Pinterest"
               >
                 <PinterestIcon />
@@ -96,7 +96,7 @@ export default function Footer() {
                 href={CONTACT_INFO.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white-muted hover:text-gold transition-colors duration-300"
+                className="text-white-muted hover:text-gold transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
                 aria-label="Facebook"
               >
                 <FacebookIcon />

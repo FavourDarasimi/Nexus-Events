@@ -66,7 +66,7 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "relative px-3 py-2 text-sm font-inter font-medium transition-colors duration-300",
+                      "relative px-3 py-2 text-sm font-inter font-medium transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm",
                       isActive(link.href)
                         ? "text-white"
                         : "text-white-muted hover:text-white",
@@ -95,7 +95,7 @@ export default function Navbar() {
             <button
               onClick={() => setMobileOpen(true)}
               className={cn(
-                "md:hidden flex flex-col gap-1.5 p-2",
+                "md:hidden flex flex-col gap-1.5 p-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black",
                 mobileOpen && "hidden",
               )}
               aria-label="Open menu"
@@ -119,7 +119,7 @@ export default function Navbar() {
           >
             <button
               onClick={() => setMobileOpen(false)}
-              className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center"
+              className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               aria-label="Close menu"
             >
               <span className="block w-6 h-0.5 bg-white rotate-45 absolute" />
