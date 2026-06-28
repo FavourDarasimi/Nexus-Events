@@ -1,37 +1,12 @@
 import Link from "next/link";
-import { SITE, NAV_LINKS, CONTACT_INFO } from "@/lib/constants";
-
-function InstagramIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-    </svg>
-  );
-}
-
-function PinterestIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 2C6.477 2 2 6.477 2 12c0 4.237 2.636 7.855 6.356 9.312-.087-.791-.167-2.005.035-2.868.182-.78 1.172-4.971 1.172-4.971s-.299-.599-.299-1.484c0-1.391.806-2.428 1.809-2.428.853 0 1.265.641 1.265 1.408 0 .858-.546 2.141-.828 3.33-.236.996.499 1.808 1.481 1.808 1.777 0 3.143-1.874 3.143-4.579 0-2.394-1.72-4.068-4.177-4.068-2.845 0-4.515 2.134-4.515 4.34 0 .859.331 1.781.744 2.282a.3.3 0 0 1 .069.288c-.076.316-.245.995-.278 1.135-.044.183-.145.222-.334.134-1.247-.58-2.027-2.405-2.027-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.472 6.165 5.776 0 3.447-2.173 6.222-5.19 6.222-1.013 0-1.966-.527-2.292-1.148l-.624 2.378c-.226.87-.835 1.958-1.244 2.622.936.29 1.931.447 2.958.447 5.523 0 10-4.477 10-10S17.523 2 12 2z" />
-    </svg>
-  );
-}
-
-function FacebookIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </svg>
-  );
-}
+import { SITE, NAV_LINKS, CONTACT_INFO, SERVICES } from "@/lib/constants";
+import { InstagramIcon, PinterestIcon, FacebookIcon } from "@/components/ui/SocialIcons";
 
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-gold/30">
       <div className="max-w-[1500px] mx-auto px-6 md:px-10 lg:px-16 py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex flex-col leading-none">
               <span className="font-playfair text-2xl tracking-wider text-white">
@@ -66,6 +41,21 @@ export default function Footer() {
 
           <div className="flex flex-col gap-4">
             <h3 className="font-cormorant text-sm tracking-widest uppercase text-gold italic">
+              What We Do
+            </h3>
+            <ul className="flex flex-col gap-3">
+              {SERVICES.slice(0,5).map((service) => (
+                <li key={service.id}>
+                  <span className="font-inter text-sm text-white-muted">
+                    {service.title}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <h3 className="font-cormorant text-sm tracking-widest uppercase text-gold italic">
               Contact
             </h3>
             <div className="flex flex-col gap-2 font-inter text-sm text-white-muted">
@@ -83,19 +73,6 @@ export default function Footer() {
               </a>
               <p className="whitespace-pre-line">{CONTACT_INFO.address}</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="border-t border-white/5">
-        <div className="max-w-[1500px] mx-auto px-6 md:px-10 lg:px-16 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-inter text-xs text-white-muted">
-            &copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.
-          </p>
-          <div className="flex items-center gap-4">
-            <p className="font-cormorant text-xs text-white-muted italic">
-              Crafted with care
-            </p>
             <div className="flex items-center gap-3">
               <a
                 href={CONTACT_INFO.social.instagram}
@@ -126,6 +103,15 @@ export default function Footer() {
               </a>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="border-t border-white/5">
+        <div className="max-w-[1500px] mx-auto px-6 md:px-10 lg:px-16 py-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <p className="font-inter text-xs text-white-muted">
+            &copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.
+          </p>
+
         </div>
       </div>
     </footer>
