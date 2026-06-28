@@ -34,6 +34,11 @@
   100% { transform: translateX(-50%); }
 }
 
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
 *,
 *::before,
 *::after {
@@ -67,6 +72,12 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-gold-dark);
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #1A1A1A 25%, #2A2A2A 50%, #1A1A1A 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

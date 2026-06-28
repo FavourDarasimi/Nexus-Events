@@ -27,16 +27,40 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Nexus Events — Luxury Event Planning",
+  metadataBase: new URL("https://nexusevents.com"),
+  title: {
+    default: "Nexus Events — Luxury Event Planning",
+    template: "%s | Nexus Events",
+  },
   description:
     "We don't plan events. We craft memories. Premium event planning for weddings, galas, corporate events, and more.",
+  keywords: [
+    "event planning",
+    "luxury events",
+    "wedding planning",
+    "corporate events",
+    "gala planning",
+    "New York event planner",
+  ],
+  authors: [{ name: "Nexus Events" }],
   openGraph: {
     title: "Nexus Events — Luxury Event Planning",
     description:
       "We don't plan events. We craft memories. Premium event planning for weddings, galas, corporate events, and more.",
+    url: "https://nexusevents.com",
     siteName: "Nexus Events",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nexus Events — Luxury Event Planning",
+    description:
+      "We don't plan events. We craft memories. Premium event planning for weddings, galas, corporate events, and more.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
