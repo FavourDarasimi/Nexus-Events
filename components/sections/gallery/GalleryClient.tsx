@@ -8,21 +8,28 @@ import { cn } from "@/lib/utils";
 
 const CATEGORIES = ["All", "Weddings", "Corporate", "Galas", "Social"];
 
-function GalleryImage({ src, alt }: { src: string; alt: string }) {
+function GalleryImage({ src, alt, aspect, priority }: { src: string; alt: string; aspect: string; priority?: boolean }) {
   const [loaded, setLoaded] = useState(false);
+  const [w, h] = aspect.split("/").map(Number);
+  const paddingBottom = `${(h / w) * 100}%`;
+  const gridSrc = src.replace("w=600", "w=400");
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden" style={{ paddingBottom }}>
       {!loaded && (
-        <div className="absolute inset-0 skeleton-shimmer rounded-xl" style={{ paddingBottom: "75%" }} />
+        <div className="absolute inset-0 skeleton-shimmer rounded-xl" />
       )}
       <img
-        src={src}
+        src={gridSrc}
         alt={alt}
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : undefined}
+        decoding="async"
+        width={w}
+        height={h}
         onLoad={() => setLoaded(true)}
         className={cn(
-          "w-full h-auto block transition-transform duration-700 group-hover:scale-105",
+          "absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105",
           loaded ? "opacity-100" : "opacity-0",
         )}
       />
@@ -100,7 +107,7 @@ export default function GalleryClient() {
                 role="button"
                 tabIndex={0}
               >
-                <GalleryImage src={item.image} alt={item.title} />
+                <GalleryImage src={item.image} alt={item.title} aspect={item.aspect} priority={i < 4} />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100">
                   <span className="font-cormorant text-xs tracking-widest uppercase text-gold italic">
                     {item.category}
