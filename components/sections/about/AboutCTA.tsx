@@ -1,36 +1,28 @@
 "use client";
 
-import { useMemo } from "react";
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 
-interface Sparkle {
-  id: number;
-  x: number;
-  y: number;
-  size: number;
-  delay: number;
-  duration: number;
-  xMove: number;
-  yMove: number;
+function seeded(i: number): number {
+  const x = Math.sin(i * 12.9898 + 78.233) * 43758.5453;
+  return x - Math.floor(x);
 }
 
-function generateSparkles(count: number): Sparkle[] {
-  return Array.from({ length: count }, (_, i) => ({
+const sparkles = Array.from({ length: 30 }, (_, i) => {
+  const s = (n: number) => seeded(i * 7 + n * 13);
+  return {
     id: i,
-    x: Math.random() * 100,
-    y: 50 + Math.random() * 50,
-    size: 2 + Math.random() * 4,
-    delay: Math.random() * 2,
-    duration: 2 + Math.random() * 3,
-    xMove: (Math.random() - 0.5) * 200,
-    yMove: -(100 + Math.random() * 200),
-  }));
-}
+    x: s(0) * 100,
+    y: 50 + s(1) * 50,
+    size: 2 + s(2) * 4,
+    delay: s(3) * 2,
+    duration: 2 + s(4) * 3,
+    xMove: (s(5) - 0.5) * 200,
+    yMove: -(100 + s(6) * 200),
+  };
+});
 
 export default function AboutCTA() {
-  const sparkles = useMemo(() => generateSparkles(30), []);
-
   return (
     <section className="relative py-24 md:py-32 bg-charcoal overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
